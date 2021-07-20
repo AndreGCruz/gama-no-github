@@ -3,7 +3,7 @@ class Car {
       this.name = name;
       this.year = year;
     }
-    age() {
+    age() {    // Aqui eu criei um método para essa classe e posso usar nos objetos criados a partir dela
       let date = new Date();
       return date.getFullYear() - this.year;
     }
@@ -26,4 +26,4 @@ class CarColour extends Car{
 
 let FordKa = new CarColour ('FordKa1',2010,'verde' );
 
-console.log(FordKa.name)
+console.log(FordKa.name)   
