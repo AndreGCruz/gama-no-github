@@ -1,0 +1,26 @@
+<body>
+
+<button onclick="myFunction1()">Sort Alphabetically</button>  <!-- botao escrito Sort Alphabetically executa a myFunction1() -->
+
+<button onclick="myFunction2()">Sort Numerically</button>
+
+<p id="demo"> <!-- identificador unico desse paragrafo-->
+    Testando  <!-- Testando não aparece no HTML pq "demo" foi modificado no JS -->
+</p>  
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo").innerHTML = points;  // Os pontos vao aparecer nessa ordem no primeiro momento
+
+function myFunction1() {
+  points.sort();
+  document.getElementById("demo").innerHTML = points; // Modifica os pontos quando esse botão é clicado
+}
+
+function myFunction2() {
+  points.sort(function(a, b){return a - b});
+  document.getElementById("demo").innerHTML = `A ordem numérica é essa ${points}`; 
+}
+</script>
+
+</body>
